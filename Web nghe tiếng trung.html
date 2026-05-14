@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Chinese Listening</title>
+
+  <style>
+
+    body{
+
+      margin:0;
+
+      background:#111;
+
+      color:white;
+
+      font-family:
+        Arial,
+        "Microsoft YaHei",
+        sans-serif;
+
+      display:flex;
+
+      justify-content:center;
+
+      align-items:center;
+
+      min-height:100vh;
+
+    }
+
+    .app{
+
+      width:90%;
+
+      max-width:520px;
+
+      background:#1e1e1e;
+
+      padding:30px;
+
+      border-radius:20px;
+
+      text-align:center;
+
+    }
+
+    select{
+
+      width:100%;
+
+      padding:12px;
+
+      margin-bottom:25px;
+
+      border:none;
+
+      border-radius:10px;
+
+      font-size:18px;
+
+    }
+
+    .hanzi{
+
+      font-size:54px;
+
+      margin-bottom:15px;
+
+    }
+
+    .pinyin{
+
+      font-size:28px;
+
+      color:#ffcc66;
+
+      margin-bottom:20px;
+
+    }
+
+    .meaning{
+
+      color:#aaa;
+
+      font-size:22px;
+
+      min-height:35px;
+
+      margin-bottom:30px;
+
+    }
+
+    button{
+
+      padding:14px 18px;
+
+      margin:5px;
+
+      border:none;
+
+      border-radius:12px;
+
+      background:#333;
+
+      color:white;
+
+      font-size:16px;
+
+      cursor:pointer;
+
+    }
+
+    button:hover{
+
+      background:#555;
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<div class="app">
+
+  <select
+    id="lessonSelect"
+    onchange="changeLesson()"
+  ></select>
+
+  <div
+    class="hanzi"
+    id="hanzi"
+  ></div>
+
+  <div
+    class="pinyin"
+    id="pinyin"
+  ></div>
+
+  <div
+    class="meaning"
+    id="meaning"
+  ></div>
+
+  <button onclick="speak()">
+    🔊 Nghe
+  </button>
+
+  <button onclick="toggleMeaning()">
+    👀 Nghĩa
+  </button>
+
+  <button onclick="nextWord()">
+    ➡ Tiếp
+  </button>
+
+</div>
+
+<script src="lessons/lesson1.js"></script>
+
+<script src="lessons/lesson2.js"></script>
+
+<script src="lessons.js"></script>
+
+<script src="voice.js"></script>
+
+<script src="app.js"></script>
+
+</body>
+</html>
